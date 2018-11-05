@@ -3,7 +3,11 @@ package com.mycompany.pesel;
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
-
+import org.quartz.*;
+import org.quartz.impl.StdSchedulerFactory;
+import static org.quartz.JobBuilder.*;
+import static org.quartz.TriggerBuilder.*;
+import static org.quartz.SimpleScheduleBuilder.*;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -12,35 +16,35 @@ public class App
     static Logger log = Logger.getLogger(App.class);
 
     public static void main( String[] args ) throws IOException {
+        initializeJobs();
+
         Scanner reader = new Scanner(System.in);
 
-        System.out.println("Name: ");
-        String name = reader.next();
+        while(true) {
+            System.out.println("Name: ");
+            String name = reader.next();
 
-        System.out.println("Surname: ");
-        String surname = reader.next();
+            System.out.println("Surname: ");
+            String surname = reader.next();
 
-        System.out.println("City: ");
-        String city = reader.next();
+            System.out.println("City: ");
+            String city = reader.next();
 
-        System.out.println("PESEL: ");
-        String pesel = reader.next();
+            System.out.println("PESEL: ");
+            String pesel = reader.next();
 
-        reader.close();
 
-        Person person = new Person(name, surname, city, pesel);
+            Person person = new Person(name, surname, city, pesel);
 
-        if(peselValid(pesel)) {
-            PatternLayout layout = new PatternLayout();
-            FileAppender appender = new FileAppender(layout, "./logs/" + pesel + ".log",false);
-            log.addAppender(appender);
-            log.info("Name: " + person.getName() + "\n" +
-                    "Surname: " + person.getSurname() + "\n" +
-                    "City: " + person.getCity() + "\n" +
-                    "PESEL: " + person.getPesel());
+            if (peselValid(pesel)) {
+                PatternLayout layout = new PatternLayout();
+                FileAppender appender = new FileAppender(layout, "./logs/" + pesel + ".log", false);
+                log.addAppender(appender);
+                log.info(person.getCity() + "\n" + person.getName() + " " + person.getSurname() + " " +
+                        person.getPesel());
+            } else
+                throw new IllegalArgumentException("The entered PESEL number is incorrect. Saving failed");
         }
-        else
-            throw new IllegalArgumentException("The entered PESEL number is incorrect. Saving failed");
     }
 
     private static int getValue(String text, int index) {
@@ -64,5 +68,29 @@ public class App
         }
         else
             return false;
+    }
+
+    private static void initializeJobs() {
+        try {
+            Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+            scheduler.start();
+
+            JobDetail resultsJob = newJob(ResultsJob.class)
+                    .withIdentity("results", "group1")
+                    .build();
+
+            Trigger resultsTrigger = newTrigger()
+                    .withIdentity("resultsTrigger", "group1")
+                    .startNow()
+                    .withSchedule(simpleSchedule()
+                    .withIntervalInSeconds(30)
+                    .repeatForever())
+                    .build();
+
+            scheduler.scheduleJob(resultsJob, resultsTrigger);
+            //scheduler.shutdown();
+        } catch (SchedulerException se) {
+            se.printStackTrace();
+        }
     }
 }
