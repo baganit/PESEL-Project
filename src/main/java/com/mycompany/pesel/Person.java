@@ -3,11 +3,13 @@ package com.mycompany.pesel;
 public class Person {
     String name;
     String surname;
+    String city;
     String pesel;
 
-    public Person(String name, String surname, String pesel) {
+    public Person(String name, String surname, String city, String pesel) {
         this.name = name;
         this.surname = surname;
+        this.city = city;
         this.pesel = pesel;
     }
 
@@ -17,6 +19,10 @@ public class Person {
 
     public String getSurname() {
         return surname;
+    }
+
+    public String getCity() {
+        return city;
     }
 
     public String getPesel() {

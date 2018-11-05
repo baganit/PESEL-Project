@@ -3,12 +3,11 @@ package com.mycompany.pesel;
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
-import org.apache.log4j.SimpleLayout;
 
 import java.io.IOException;
 import java.util.Scanner;
 
-public class App 
+public class App
 {
     static Logger log = Logger.getLogger(App.class);
 
@@ -21,23 +20,31 @@ public class App
         System.out.println("Surname: ");
         String surname = reader.next();
 
+        System.out.println("City: ");
+        String city = reader.next();
+
         System.out.println("PESEL: ");
         String pesel = reader.next();
 
         reader.close();
 
-        Person person = new Person(name, surname, pesel);
+        Person person = new Person(name, surname, city, pesel);
 
         if(peselValid(pesel)) {
             PatternLayout layout = new PatternLayout();
-            FileAppender appender = new FileAppender(layout, "./logs/" + pesel,false);
+            FileAppender appender = new FileAppender(layout, "./logs/" + pesel + ".log",false);
             log.addAppender(appender);
             log.info("Name: " + person.getName() + "\n" +
                     "Surname: " + person.getSurname() + "\n" +
+                    "City: " + person.getCity() + "\n" +
                     "PESEL: " + person.getPesel());
         }
         else
             throw new IllegalArgumentException("The entered PESEL number is incorrect. Saving failed");
+    }
+
+    private static int getValue(String text, int index) {
+        return Character.getNumericValue(text.charAt(index));
     }
 
     private static boolean peselValid(String pesel) {
@@ -57,9 +64,5 @@ public class App
         }
         else
             return false;
-    }
-
-    private static int getValue(String text, int index) {
-        return Character.getNumericValue(text.charAt(index));
     }
 }
