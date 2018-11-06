@@ -1,3 +1,4 @@
-/home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/Person.java
-/home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/ResultsJob.java
-/home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/App.java
+/home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/main/App.java
+/home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/jobs/BreaksJob.java
+/home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/main/Person.java
+/home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/jobs/ResultsJob.java

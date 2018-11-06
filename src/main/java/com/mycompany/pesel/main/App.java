@@ -1,5 +1,7 @@
-package com.mycompany.pesel;
+package com.mycompany.pesel.main;
 
+import com.mycompany.pesel.jobs.BreaksJob;
+import com.mycompany.pesel.jobs.ResultsJob;
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
@@ -16,11 +18,12 @@ public class App
     static Logger log = Logger.getLogger(App.class);
 
     public static void main( String[] args ) throws IOException {
-        initializeJobs();
+        initializeResultsJob();
+        initializeBreaksJob();
 
         Scanner reader = new Scanner(System.in);
 
-        while(true) {
+        while (true) {
             System.out.println("Name: ");
             String name = reader.next();
 
@@ -53,7 +56,7 @@ public class App
 
     private static boolean peselValid(String pesel) {
         int sum;
-        if(pesel.length() == 11) {
+        if (pesel.length() == 11) {
             sum = getValue(pesel, 0) * 1 + getValue(pesel, 1) * 3 +
                     getValue(pesel, 2) * 7 + getValue(pesel, 3) * 9 +
                     getValue(pesel, 4) * 1 + getValue(pesel, 5) * 3 +
@@ -70,7 +73,7 @@ public class App
             return false;
     }
 
-    private static void initializeJobs() {
+    private static void initializeResultsJob() {
         try {
             Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
             scheduler.start();
@@ -88,6 +91,30 @@ public class App
                     .build();
 
             scheduler.scheduleJob(resultsJob, resultsTrigger);
+            //scheduler.shutdown();
+        } catch (SchedulerException se) {
+            se.printStackTrace();
+        }
+    }
+
+    private static void initializeBreaksJob() {
+        try {
+            Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+            scheduler.start();
+
+            JobDetail breaksJob = newJob(BreaksJob.class)
+                    .withIdentity("breaks", "group1")
+                    .build();
+
+            Trigger breaksTrigger = newTrigger()
+                    .withIdentity("breaksTrigger", "group1")
+                    .startNow()
+                    .withSchedule(simpleSchedule()
+                            .withIntervalInSeconds(60)
+                            .repeatForever())
+                    .build();
+
+            scheduler.scheduleJob(breaksJob, breaksTrigger);
             //scheduler.shutdown();
         } catch (SchedulerException se) {
             se.printStackTrace();

@@ -1,10 +1,11 @@
-package com.mycompany.pesel;
+package com.mycompany.pesel.jobs;
 
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
 import org.eclipse.collections.impl.multimap.list.FastListMultimap;
 import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,9 +15,9 @@ import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 
-public class ResultsJob implements org.quartz.Job {
+public class ResultsJob implements org.quartz.Job  {
 
-    public void execute(JobExecutionContext jobExecutionContext) {
+    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         System.out.println("Jazdaa");
         FastListMultimap<String, String> citiesToPeople = FastListMultimap.newMultimap();
         File[] logfiles = new File("./logs/").listFiles();
