@@ -1,4 +1,4 @@
-package com.mycompany.pesel;
+package com.mycompany.pesel.main;
 
 import static org.junit.Assert.assertTrue;
 

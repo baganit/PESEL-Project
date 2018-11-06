@@ -2,30 +2,39 @@ package com.mycompany.pesel.main;
 
 import com.mycompany.pesel.jobs.BreaksJob;
 import com.mycompany.pesel.jobs.ResultsJob;
-import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PatternLayout;
+import org.eclipse.collections.impl.multimap.list.FastListMultimap;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 import static org.quartz.JobBuilder.*;
 import static org.quartz.TriggerBuilder.*;
 import static org.quartz.SimpleScheduleBuilder.*;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class App
 {
+    static FastListMultimap<String, Person> people = FastListMultimap.newMultimap();
     static Logger log = Logger.getLogger(App.class);
+    static Scanner reader = new Scanner(System.in);
+    static Scheduler scheduler;
+    static {
+        try {
+            scheduler = StdSchedulerFactory.getDefaultScheduler();
+        } catch (SchedulerException e) {
+            e.printStackTrace();
+        }
+    }
 
-    public static void main( String[] args ) throws IOException {
+    public static void main( String[] args ) throws SchedulerException {
         initializeResultsJob();
         initializeBreaksJob();
-
-        Scanner reader = new Scanner(System.in);
 
         while (true) {
             System.out.println("Name: ");
             String name = reader.next();
+
+            if(name.equals("!q"))
+                exitAndCleanUp();
 
             System.out.println("Surname: ");
             String surname = reader.next();
@@ -35,16 +44,16 @@ public class App
 
             System.out.println("PESEL: ");
             String pesel = reader.next();
+            System.out.println(pesel);
 
 
             Person person = new Person(name, surname, city, pesel);
 
             if (peselValid(pesel)) {
-                PatternLayout layout = new PatternLayout();
-                FileAppender appender = new FileAppender(layout, "./logs/" + pesel + ".log", false);
-                log.addAppender(appender);
-                log.info(person.getCity() + "\n" + person.getName() + " " + person.getSurname() + " " +
-                        person.getPesel());
+                people.put(person.getCity(), person);
+                System.out.println("o ja");
+                System.out.println(people);
+
             } else
                 throw new IllegalArgumentException("The entered PESEL number is incorrect. Saving failed");
         }
@@ -91,7 +100,6 @@ public class App
                     .build();
 
             scheduler.scheduleJob(resultsJob, resultsTrigger);
-            //scheduler.shutdown();
         } catch (SchedulerException se) {
             se.printStackTrace();
         }
@@ -99,7 +107,7 @@ public class App
 
     private static void initializeBreaksJob() {
         try {
-            Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+            scheduler.getContext().put("people", people);
             scheduler.start();
 
             JobDetail breaksJob = newJob(BreaksJob.class)
@@ -115,9 +123,14 @@ public class App
                     .build();
 
             scheduler.scheduleJob(breaksJob, breaksTrigger);
-            //scheduler.shutdown();
         } catch (SchedulerException se) {
             se.printStackTrace();
         }
+    }
+
+    private static void exitAndCleanUp() throws SchedulerException {
+        reader.close();
+        scheduler.shutdown();
+        System.exit(0);
     }
 }

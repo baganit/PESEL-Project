@@ -3,17 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="fc9d2387-3633-4df9-85c7-900bfe853d29" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/main/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/main/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/ResultsJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/jobs/ResultsJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/pesel/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/pesel/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/pesel/ResultsJob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/56021855196.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/65111665137.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/98100200578.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/results.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/jobs/ResultsJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/jobs/ResultsJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/main/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/main/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/pesel/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/pesel/main/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/pesel/jobs/ResultsJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/pesel/jobs/ResultsJob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mycompany/pesel/main/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mycompany/pesel/main/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/pesel-project-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/pesel-project-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mycompany.pesel.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mycompany.pesel.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.mycompany.pesel.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.mycompany.pesel.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mycompany.pesel.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.mycompany.pesel.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mycompany/pesel/AppTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,15 +33,16 @@
         <counts>
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8123" />
+          <entry key="java" value="9193" />
           <entry key="log" value="1" />
           <entry key="properties" value="212" />
           <entry key="xml" value="21" />
@@ -45,7 +50,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8123" />
+          <entry key="JAVA" value="9193" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="212" />
           <entry key="XML" value="21" />
@@ -76,11 +81,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/pesel/main/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state relative-caret-position="225">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/pesel/jobs/ResultsJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="240">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="16" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -112,8 +117,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/pesel/jobs/BreaksJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="54" column="11" lean-forward="true" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+            <state relative-caret-position="270">
+              <caret line="24" selection-start-line="24" selection-end-line="50" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,21 +127,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/65111665137.log">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/results.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/pesel/AppTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/pesel/main/AppTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -147,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/pesel/main/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="13" selection-start-column="5" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -176,8 +167,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/ResultsJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/BreaksJob.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/jobs/BreaksJob.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/mycompany/pesel/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/mycompany/pesel/main/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/jobs/ResultsJob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mycompany/pesel/main/App.java" />
       </list>
     </option>
@@ -228,18 +222,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="peselproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="peselproject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="peselproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="peselproject" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="peselproject" type="b2602c69:ProjectViewProjectNode" />
@@ -300,19 +288,35 @@
             </path>
             <path>
               <item name="peselproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="peselproject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="peselproject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="peselproject" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pesel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="peselproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541539488041" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541547368769" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -321,6 +325,10 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.mycompany.pesel.main" />
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/resources/config" />
@@ -373,12 +381,13 @@
       <workItem from="1541433452941" duration="8518000" />
       <workItem from="1541442458261" duration="9118000" />
       <workItem from="1541452091029" duration="4485000" />
-      <workItem from="1541533386009" duration="6453000" />
+      <workItem from="1541533386009" duration="13379000" />
+      <workItem from="1541547722831" duration="323000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33432000" />
+    <option name="totallyTimeSpent" value="40681000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -393,7 +402,7 @@
     <frame x="-3" y="31" width="1372" height="691" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23524962" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23903178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -402,7 +411,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.11190053" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3676732" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -420,7 +429,7 @@
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.039334342" />
+      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.10665658" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,20 +500,7 @@
     <entry file="file://$PROJECT_DIR$/logs/47072171146.log" />
     <entry file="file://$PROJECT_DIR$/logs/72080422667.log" />
     <entry file="file://$PROJECT_DIR$/logs/95010515871.log" />
-    <entry file="file://$PROJECT_DIR$/logs/98100200578.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/pesel/AppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/98100200578.log" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.2.1/quartz-2.2.1.jar!/org/quartz/Job.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -519,33 +515,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="881" selection-start-line="881" selection-end-line="881" />
-          <folding>
-            <element signature="e#33782#33783#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/65111665137.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/65111665137.log" />
     <entry file="file://$PROJECT_DIR$/logs/results.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="16" selection-end-column="20" />
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="16" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/pesel/jobs/BreaksJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="54" column="11" lean-forward="true" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+        <state relative-caret-position="270">
+          <caret line="24" selection-start-line="24" selection-end-line="50" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/pesel/main/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/pesel/main/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="13" selection-start-column="5" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/pesel/jobs/ResultsJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -554,25 +565,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/pesel/main/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/pesel/main/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mycompany/pesel/jobs/ResultsJob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state relative-caret-position="225">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -657,6 +651,17 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <last-edited>Maven: junit:junit:4.11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
