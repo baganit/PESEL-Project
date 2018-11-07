@@ -20,11 +20,12 @@ public class App {
             e.printStackTrace();
         }
     }
+    private static String name;
+    private static String pesel;
+
 
     public static void main( String[] args ) throws SchedulerException {
         JobInitializer.initializeJobs(scheduler, people);
-        String name;
-        String pesel;
 
         while (true) {
             System.out.println("City: ");
@@ -45,12 +46,12 @@ public class App {
             else
                 throw new IllegalArgumentException("Entered data is incorrect!");
 
-
-
             Person person = new Person(name, city, pesel);
 
-            if (DataValidator.peselValid(pesel))
-                people.put(person.getCity(), person);
+            if (DataValidator.peselValid(pesel)) {
+                DataValidator.removeExistingPesel(people, pesel);
+                people.put(city, person);
+            }
             else
                 throw new IllegalArgumentException("The entered PESEL number is incorrect. Saving failed");
 
@@ -60,10 +61,13 @@ public class App {
     private static void isItQuit(String text) throws SchedulerException {
         if (text.equals("!q"))
             exitAndCleanUp();
+    }
 
     private static void exitAndCleanUp() throws SchedulerException {
         reader.close();
         scheduler.shutdown();
         System.exit(0);
     }
+
+
 }

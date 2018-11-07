@@ -1,5 +1,8 @@
 package com.mycompany.pesel.tools;
 
+import com.mycompany.pesel.main.Person;
+import org.eclipse.collections.impl.multimap.list.FastListMultimap;
+
 public class DataValidator {
 
     public static boolean inputDataValid(String data) {
@@ -45,4 +48,14 @@ public class DataValidator {
     private static int getValue(String text, int index) {
         return Character.getNumericValue(text.charAt(index));
     }
+
+    public static void removeExistingPesel(FastListMultimap<String, Person> people, String pesel) {
+        people.forEachKey(city -> {
+            people.forEachValue(person -> {
+                if(person.getPesel().equals(pesel))
+                    people.remove(city, person);
+            });
+        });
+    }
 }
+
