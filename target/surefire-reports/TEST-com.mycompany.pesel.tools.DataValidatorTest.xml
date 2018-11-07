@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /home/cooler/Documents/peselproject/target/surefire 2018-11-07T22-53-05_465-jvmRun1 surefire15428793674326036683tmp surefire_013703347736694568223tmp"/>
+    <property name="sun.java.command" value="org.apache.maven.surefire.booter.ForkedBooter /home/cooler/Documents/peselproject/target/surefire 2018-11-07T23-04-22_031-jvmRun1 surefire5057338773066743792tmp surefire_033690669124828492tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/cooler/Documents/peselproject/target/test-classes:/home/cooler/Documents/peselproject/target/classes:/home/cooler/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/cooler/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/cooler/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/cooler/.m2/repository/org/quartz-scheduler/quartz/2.2.1/quartz-2.2.1.jar:/home/cooler/.m2/repository/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar:/home/cooler/.m2/repository/org/quartz-scheduler/quartz-jobs/2.2.1/quartz-jobs-2.2.1.jar:/home/cooler/.m2/repository/org/eclipse/collections/eclipse-collections-api/9.2.0/eclipse-collections-api-9.2.0.jar:/home/cooler/.m2/repository/org/eclipse/collections/eclipse-collections/9.2.0/eclipse-collections-9.2.0.jar:/home/cooler/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/home/cooler/.m2/repository/org/slf4j/slf4j-log4j12/1.7.5/slf4j-log4j12-1.7.5.jar:"/>
     <property name="sun.cpu.endian" value="little"/>

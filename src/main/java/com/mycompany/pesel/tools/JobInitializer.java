@@ -5,6 +5,8 @@ import com.mycompany.pesel.jobs.ResultsJob;
 import com.mycompany.pesel.main.Person;
 import org.eclipse.collections.impl.multimap.list.FastListMultimap;
 import org.quartz.*;
+
+import static org.quartz.CronScheduleBuilder.cronSchedule;
 import static org.quartz.JobBuilder.*;
 import static org.quartz.TriggerBuilder.*;
 import static org.quartz.SimpleScheduleBuilder.*;
@@ -32,12 +34,10 @@ public class JobInitializer {
                     .withIdentity("breaks", "group1")
                     .build();
 
-            Trigger breaksTrigger = newTrigger()
+            CronTrigger breaksTrigger = newTrigger()
                     .withIdentity("breaksTrigger", "group1")
                     .startNow()
-                    .withSchedule(simpleSchedule()
-                            .withIntervalInSeconds(60)
-                            .repeatForever())
+                    .withSchedule(cronSchedule("0 * * * * ?"))
                     .build();
 
             scheduler.scheduleJob(breaksJob, breaksTrigger);
