@@ -26,9 +26,8 @@ public class App
     }
 
     public static void main( String[] args ) throws SchedulerException {
-        initializeResultsJob();
-        initializeBreaksJob();
-
+        initializeJobs();
+        
         while (true) {
             System.out.println("Name: ");
             String name = reader.next();
@@ -82,9 +81,9 @@ public class App
             return false;
     }
 
-    private static void initializeResultsJob() {
+    private static void initializeJobs() {
         try {
-            Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+            scheduler.getContext().put("people", people);
             scheduler.start();
 
             JobDetail resultsJob = newJob(ResultsJob.class)
@@ -98,18 +97,7 @@ public class App
                     .withIntervalInSeconds(30)
                     .repeatForever())
                     .build();
-
-            scheduler.scheduleJob(resultsJob, resultsTrigger);
-        } catch (SchedulerException se) {
-            se.printStackTrace();
-        }
-    }
-
-    private static void initializeBreaksJob() {
-        try {
-            scheduler.getContext().put("people", people);
-            scheduler.start();
-
+            
             JobDetail breaksJob = newJob(BreaksJob.class)
                     .withIdentity("breaks", "group1")
                     .build();
@@ -123,11 +111,13 @@ public class App
                     .build();
 
             scheduler.scheduleJob(breaksJob, breaksTrigger);
+            scheduler.scheduleJob(resultsJob, resultsTrigger);
         } catch (SchedulerException se) {
             se.printStackTrace();
         }
     }
 
+    
     private static void exitAndCleanUp() throws SchedulerException {
         reader.close();
         scheduler.shutdown();
