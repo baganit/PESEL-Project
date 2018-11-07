@@ -38,7 +38,6 @@ public class DataValidator {
 
             if(sum % 10 != 0)
                 return false;
-
             return true;
         }
         else

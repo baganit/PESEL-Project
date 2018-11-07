@@ -1,1 +1,2 @@
-/home/cooler/Documents/peselproject/src/test/java/com/mycompany/pesel/main/AppTest.java
+/home/cooler/Documents/peselproject/src/test/java/com/mycompany/pesel/tools/DataValidatorTest.java
+/home/cooler/Documents/peselproject/src/test/java/com/mycompany/pesel/jobs/BreaksJobTest.java

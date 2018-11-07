@@ -1,4 +1,7 @@
 com/mycompany/pesel/jobs/BreaksJob.class
 com/mycompany/pesel/jobs/ResultsJob.class
+com/mycompany/pesel/tools/JobInitializer.class
+com/mycompany/pesel/tools/DataParser.class
+com/mycompany/pesel/tools/DataValidator.class
 com/mycompany/pesel/main/App.class
 com/mycompany/pesel/main/Person.class

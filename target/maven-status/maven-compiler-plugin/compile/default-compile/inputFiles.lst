@@ -1,4 +1,7 @@
 /home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/main/App.java
+/home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/tools/DataValidator.java
 /home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/jobs/BreaksJob.java
+/home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/tools/DataParser.java
 /home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/main/Person.java
+/home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/tools/JobInitializer.java
 /home/cooler/Documents/peselproject/src/main/java/com/mycompany/pesel/jobs/ResultsJob.java

@@ -9,10 +9,10 @@ import java.time.LocalTime;
 import static java.time.temporal.ChronoUnit.MINUTES;
 
 public class BreaksJob implements org.quartz.Job {
+    FastList<LocalTime> schedule = initializeSchedule();
 
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         LocalTime now = LocalTime.now();
-        FastList<LocalTime> schedule = initializeSchedule();
         long minutes = checkMinutesTillEnd(schedule, now);
 
         if (isItBreakNow(schedule, now))
@@ -22,7 +22,7 @@ public class BreaksJob implements org.quartz.Job {
     }
 
 
-    private boolean isItBreakNow(FastList<LocalTime> schedule, LocalTime now) {
+    boolean isItBreakNow(FastList<LocalTime> schedule, LocalTime now) {
         int index = 0;
         LocalTime endOfLastClasses = schedule.get(10);
 
@@ -42,7 +42,7 @@ public class BreaksJob implements org.quartz.Job {
             return true;
     }
 
-    private long checkMinutesTillEnd(FastList<LocalTime> schedule, LocalTime now) {
+    long checkMinutesTillEnd(FastList<LocalTime> schedule, LocalTime now) {
         long minutes = -1;
         LocalTime endOfLastClasses = schedule.get(10);
         LocalTime beginningOfFirstClasses = schedule.get(11);
