@@ -22,12 +22,10 @@ public class JobInitializer {
                     .withIdentity("results", "group1")
                     .build();
 
-            Trigger resultsTrigger = newTrigger()
+            CronTrigger resultsTrigger = newTrigger()
                     .withIdentity("resultsTrigger", "group1")
                     .startNow()
-                    .withSchedule(simpleSchedule()
-                            .withIntervalInSeconds(30)
-                            .repeatForever())
+                    .withSchedule(cronSchedule("0/30 * * * * ? *"))
                     .build();
 
             JobDetail breaksJob = newJob(BreaksJob.class)
