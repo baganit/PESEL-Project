@@ -25,12 +25,11 @@ public class ResultsJob implements org.quartz.Job {
 
         FastListMultimap<String, Person> citiesToPeople =
                 (FastListMultimap<String, Person>) schedulerContext.get("people");
-        File results = new File("./logs/results.log");
 
+        File results = new File("./logs/results.log");
         results.delete();
 
         Logger log = Logger.getLogger(ResultsJob.class);
-
         PatternLayout layout = new PatternLayout();
         FileAppender appender = null;
         try {
@@ -39,11 +38,11 @@ public class ResultsJob implements org.quartz.Job {
             e.printStackTrace();
         }
         log.addAppender(appender);
+
         citiesToPeople.forEachKey(city -> {
             log.info(city + ":\n******");
             citiesToPeople.get(city).forEach(person ->
-                log.info(person.getName() + " "
-                        + person.getSurname() + " " + person.getPesel())
+                        log.info(person.getName() + " " + person.getPesel())
             );
             log.info("");
         });
