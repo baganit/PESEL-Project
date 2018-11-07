@@ -14,8 +14,6 @@ import java.io.IOException;
 public class ResultsJob implements org.quartz.Job {
 
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-        System.out.println("Jazdaa");
-
         SchedulerContext schedulerContext = null;
         try {
             schedulerContext = jobExecutionContext.getScheduler().getContext();

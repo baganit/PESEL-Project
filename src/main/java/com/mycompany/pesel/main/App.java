@@ -68,6 +68,4 @@ public class App {
         scheduler.shutdown();
         System.exit(0);
     }
-
-
 }
