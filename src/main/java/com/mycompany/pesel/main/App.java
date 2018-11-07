@@ -60,7 +60,6 @@ public class App {
     private static void isItQuit(String text) throws SchedulerException {
         if (text.equals("!q"))
             exitAndCleanUp();
-    }
 
     private static void exitAndCleanUp() throws SchedulerException {
         reader.close();
