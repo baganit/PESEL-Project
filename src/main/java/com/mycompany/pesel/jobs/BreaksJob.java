@@ -25,12 +25,16 @@ public class BreaksJob implements org.quartz.Job {
     boolean isItBreakNow(FastList<LocalTime> schedule, LocalTime now) {
         int index = 0;
         LocalTime endOfLastClasses = schedule.get(10);
+        LocalTime beginningOfFirstClasses = schedule.get(11);
 
         if (now.isAfter(endOfLastClasses))
             return true;
 
+        if (now.isBefore(beginningOfFirstClasses))
+            return true;
+
         for (int i = 0; i < schedule.size(); i++) {
-            if (now.isBefore(schedule.get(i))) {
+            if (now.isBefore(schedule.get(i)) || now.equals(schedule.get(i))) {
                 index = i;
                 break;
             }
@@ -69,15 +73,15 @@ public class BreaksJob implements org.quartz.Job {
         FastList<LocalTime> schedule = FastList.newList(0);
 
         LocalTime endOfClass1 = LocalTime.of(9, 45);
-        LocalTime endOfBreak1 = LocalTime.of(10, 00);
+        LocalTime endOfBreak1 = LocalTime.of(9, 59);
         LocalTime endOfClass2 = LocalTime.of(11, 30);
-        LocalTime endOfBreak2 = LocalTime.of(11, 45);
+        LocalTime endOfBreak2 = LocalTime.of(11, 44);
         LocalTime endOfClass3 = LocalTime.of(13, 15);
-        LocalTime endOfBreak3 = LocalTime.of(13,45);
+        LocalTime endOfBreak3 = LocalTime.of(13,44);
         LocalTime endOfClass4 = LocalTime.of(15,15);
-        LocalTime endOfBreak4 = LocalTime.of(15, 30);
+        LocalTime endOfBreak4 = LocalTime.of(15, 29);
         LocalTime endOfClass5 = LocalTime.of(17,00);
-        LocalTime endOfBreak5 = LocalTime.of(17, 15);
+        LocalTime endOfBreak5 = LocalTime.of(17, 14);
         LocalTime endOfClass6 = LocalTime.of(18, 45);
         LocalTime endOfBreak6 = LocalTime.of(8, 15);
 

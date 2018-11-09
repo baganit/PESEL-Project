@@ -47,16 +47,16 @@ public class BreaksJobTest {
 
     @Test
     public void shouldBeBreak() {
-        LocalTime now = LocalTime.of(9, 46);
-
         breakTimes.forEach(breakTime ->
-                assertTrue(breaksJob.isItBreakNow(breaksJob.schedule, now)));
+                assertTrue(breakTime + " " + breaksJob.isItBreakNow(breaksJob.schedule, breakTime),
+                        breaksJob.isItBreakNow(breaksJob.schedule, breakTime)));
+        System.out.println("elo");
     }
 
     @Test
     public void shouldBeClass() {
-        LocalTime now = LocalTime.of(10, 30);
         classTimes.forEach(classTime ->
-                assertFalse(breaksJob.isItBreakNow(breaksJob.schedule, now)));
+                assertFalse(classTime + " " + breaksJob.isItBreakNow(breaksJob.schedule, classTime),
+                        breaksJob.isItBreakNow(breaksJob.schedule, classTime)));
     }
 }
